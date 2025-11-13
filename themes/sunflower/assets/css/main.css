@@ -1,0 +1,65 @@
+:root {
+  --background-color: #eae7e1;
+  --background-accent: #c4bcaf;
+  --text-color: #201d1c;
+  --text-highlight-color: #00000020;
+  --link-underline-color: #201d1c40;
+  --link-color: #004a8a;
+}
+
+:root.dark {
+  --background-color: #0d1017;
+  --background-accent: #2b2f37;
+  --text-color: #e1ded9;
+  --text-highlight-color: #ffffff20;
+  --link-underline-color: #e1ded940;
+  --link-color: #b4dcff;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  font-family: "Open Sans", "Montserrat", sans-serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  color: var(--text-color);
+  min-height: 100vh;
+  margin: 1rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  max-width: 768px;
+  padding: 0 2rem;
+}
+
+svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button svg {
+  margin-right: 0.5rem;
+}
+
+[data-theme="light"] .icon-dark,
+[data-theme="dark"] .icon-light {
+  display: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+footer {
+  border-top: 1px solid #222;
+  margin-top: 1rem;
+}

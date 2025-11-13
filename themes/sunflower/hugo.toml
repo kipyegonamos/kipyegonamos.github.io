@@ -1,0 +1,11 @@
+baseURL = 'https://kipyegonamos.github.io/'
+languageCode = 'en-US'
+title = 'Theme title'
+
+[params]
+  description = ''
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = '0.146.0'

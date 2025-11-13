@@ -1,3 +1,7 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://kipyegonamos.github.io/'
 languageCode = 'en-us'
-title = 'Amos Kipyegon'
+title = 'kipyegonamos.github.io'
+theme = 'sunflower'
+
+[params]
+  description = 'Amos Kipyegon personal website'
