@@ -3,20 +3,18 @@
 
 <head>
   {{ partial "head.html" . }}
+  {{ block "head-css" .}}{{ end }}
 </head>
 
 <body>
-  <div class="main">
-    <header>
-      {{ partial "header.html" . }}
-    </header>
-    <main>
-      {{ block "main" . }}{{ end }}
-    </main>
-    <footer>
-      {{ partial "footer.html" . }}
-    </footer>
-  </div>
+  <header>
+    {{ partial "header.html" . }}
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partialCached "script.html" . }}
 </body>
 
 </html>

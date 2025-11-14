@@ -5,6 +5,11 @@ draft = false
 description = "Amos Kipyegon personal website"
 +++
 
+Hello! I'm Amos Kipyegon.
+
 Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat
 pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim
-excepteur excepteur pariatur nostrud qui irure ullamco.
+excepteur excepteur pariatur nostrud qui irure ullamco...
+
+Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat
+pariatur do dolor ipsum enim. Consequat tempor do dolor eu.
