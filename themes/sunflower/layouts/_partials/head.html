@@ -2,8 +2,8 @@
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ printf "%s | %s" .Title .Site.Title }}{{ end }}</title>
 {{ $description := .Description | default .Summary | default .Site.Params.description }}
-{{ with $description }}
-<meta name="description" content="{{ . | plainify | htmlUnescape | truncate 160 }}">
+    {{ with $description }}
+    <meta name="description" content="{{ . | plainify | htmlUnescape | truncate 160 }}">
 {{ end }}
 
 
