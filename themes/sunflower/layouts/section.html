@@ -1,10 +1,45 @@
+{{ define "head-css" }}
+    {{- with resources.Get "css/section.css"}}
+        {{- if hugo.IsDevelopment }}
+            <link rel="stylesheet" href="{{ .RelPermalink }}">
+        {{- else }}
+            {{- with . | minify | fingerprint }}
+                <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+            {{- end }}
+        {{- end }}
+    {{- end }}
+{{ end }}
+
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <section>
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      {{ .Summary }}
-    </section>
-  {{ end }}
+    <div class="section-container">
+        <div class="section-header">
+            <h1 class="section-title">{{ .Title }}</h1>
+        </div>
+
+        {{- if .Pages }}
+            <div class="section-grid">
+                {{- range .Pages.ByPublishDate.Reverse }}
+                    <article class="section-card">
+                        <h2 class="card-title">
+                            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                        </h2>
+                        <p class="card-summary">{{ .Summary | plainify | truncate 180 }}</p>
+                        <time class="card-date">
+                            {{ .Date.Format "2 Jan 2006" }}
+                        </time>
+                    </article>
+                {{- end }}
+            </div>
+        {{- else }}
+            <div class="section-empty">
+                {{ $image := resources.Get "images/WIP.jpg" }}
+                {{ with $image }}
+                    {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+                        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="Work in progress" class="empty-image">
+                    {{ end }}
+                {{ end }}
+                <p>Nothing here yet — check back soon!</p>
+            </div>
+        {{- end }}
+    </div>
 {{ end }}

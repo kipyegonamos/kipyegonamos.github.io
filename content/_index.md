@@ -5,11 +5,11 @@ draft = false
 description = "Amos Kipyegon personal website"
 +++
 
-Hello! I'm Amos Kipyegon.
+Welcome to my website!
 
-Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat
-pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim
-excepteur excepteur pariatur nostrud qui irure ullamco...
+I'm Amos Kipyegon, a Software Engineer specializing in Server-Side Programming and Machine Learning.
 
-Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat
-pariatur do dolor ipsum enim. Consequat tempor do dolor eu...
+I build robust, scalable back-end solutions using languages like Go, C/C++, and Python.
+I also have a strong proficiency in developing front-end applications with JavaScript/TypeScript for the modern web.
+
+I am currently available for Freelance projects and collaborations.

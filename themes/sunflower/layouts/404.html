@@ -1,0 +1,29 @@
+{{ define "head-css" }}
+    {{- $css := resources.Get "css/404.css"}}
+        {{- if $css }}
+            {{- if hugo.IsDevelopment }}
+                <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+            {{- else }}
+                {{- with $css | minify | fingerprint }}
+                <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+            {{- end }}
+        {{- end }}
+    {{- end }}
+{{ end }}
+
+{{ define "main" }}
+    <div class="notfound-container">
+        <div class="notfound-content">
+            <h1 class="notfound-title">404</h1>
+            <p class="notfound-message">
+                Oops — the page you’re looking for doesn’t exist.
+            </p>
+
+            <div class="notfound-actions">
+                <a href="{{ "/" | relURL }}" class="notfound-button">
+                    ← Back to home
+                </a>
+            </div>
+        </div>
+    </div>
+{{ end }}
