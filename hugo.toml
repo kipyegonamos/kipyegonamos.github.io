@@ -5,3 +5,7 @@ theme = 'sunflower'
 
 [params]
   description = 'Amos Kipyegon personal website'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
